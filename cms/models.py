@@ -136,7 +136,7 @@ def send_email_on_new_signup(sender, instance, created, **kwargs):
         message += f'Subject: {instance.subject}\n'
         message += f'Message: {instance.message}\n'
         from_email = settings.EMAIL_HOST_USER
-        recipient_list = ['sales@dreamziarah.com',]
+        recipient_list = ['ashiq@dreamtourism.it','farhadkabir1212@gmail.com']
         send_mail(subject, message, from_email, recipient_list)
 
         # Send feedback email to the sender
@@ -171,7 +171,7 @@ def send_email(sender, instance, created, **kwargs):
         message = render_to_string('subscription_confirmation_email.html', {'email': instance.email})
 
         from_email = settings.EMAIL_HOST_USER
-        recipient_list = ['sales@dreamziarah.com', 'farhadkabir1212@gmail.com']
+        recipient_list = ['ashiq@dreamtourism.it', 'farhadkabir1212@gmail.com']
         send_mail(
             subject,
             '',
